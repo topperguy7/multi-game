@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+*{
+  margin: 0px;
+  padding: 0px;
+
+  box-sizing: border-box;
+  font-family: "poppins";
+}
+
+body{
+  min-height: 100vh;
+  padding: 30px;
+
+  background:
+  radial-gradient(circle farthest-side at 20% 30%, rgba(59,130,246,0.35), transparent 60%),
+  radial-gradient(circle farthest-side at 80% 70%, rgba(236,72,153,0.35), transparent 60%),
+  #ffffff;
+}
+
+.content-body{
+  height: calc(100vh - 60px);
+
+  border: 2px solid black;
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 30px;
+}
+
+.navbar{
+  display: flex;
+  padding: 20px;
+
+  gap: 400px;
+
+  background: transparent;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.navbar-top h1{
+  font-size: 1.5rem;
+  color: hsl(39, 100%, 40%);
+
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.navbar-top h1:active{
+  transform: scale(1.06);
+}
+
+.navbar-bot{
+  display: flex;
+
+  gap: 40px;
+}
+
+.navbar-bot h1{
+  font-size: 1.5rem;
+
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+
+  transition: all 0.3s ease;
+}
+
+.navbar-bot h1:hover{
+  transform: translateY(-4px);
+  border-bottom: 1px solid black;
+}
+
+.navbar-bot h1:active{
+  transform: translateY(0px);
+  transform: scale(0.98);
+}
+
+td{
+  height: 200px;
+  width: 200px;
+
+  font-size: 8rem;
+  border: 2px solid black;
+
+  padding: 4px 16px;
+  background-color: orange;
+  cursor: pointer;
+  text-align: center;
+
+  transition: ease 0.2s;
+}
+
+td:active{
+  transform: scale(.97);
+}
+
+.ttt-btn{
+  padding: 10px 30px;
+  font-size: 2rem;
+
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+
+  background-color: hsl(39, 100%, 50%);
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.ttt-btn:hover{
+  background-color: hsl(39, 100%, 40%);
+  transform: translateY(-2px);
+}
+
+.ttt-btn:active{
+  background-color: hsl(39, 100%, 30%);
+  transform: scale(0.95);
+}
+
+@media (max-width:768px){
+  body{
+    padding: 10px;
+  }
+
+  .content-body{
+    height: calc(100vh - 20px);
+  }
+
+  .navbar{
+    gap: 50px;
+    margin-top: -100px;
+  }
+
+  .navbar h1{
+    font-size: 1rem;
+  }
+
+  .navbar-bot{
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  table{
+    border: 2px dashed black;
+  }
+
+  td{
+    height: 100px;
+    width: 90px;
+
+    font-size: 3rem;
+    padding: 2px 4px;
+
+    border: 1px solid black;
+  }
+}
